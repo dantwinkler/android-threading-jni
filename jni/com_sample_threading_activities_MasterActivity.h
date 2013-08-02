@@ -7,13 +7,6 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
-/*
- * Class:     com_sample_threading_activities_MasterActivity
- * Method:    init
- * Signature: ()V
- */
-JNIEXPORT void JNICALL Java_com_sample_threading_activities_MasterActivity_init
-  (JNIEnv *, jobject);
 
 /*
  * Class:     com_sample_threading_activities_MasterActivity

@@ -14,10 +14,6 @@
 
 extern JavaVM*					g_pJavaVM;
 
-extern jobject 					g_oMasterActivity;
-
-extern jmethodID 				g_oLogMessageMethod;
-
 extern boost::recursive_mutex 	g_oMutex;
 
 extern TaskRunnerPtr 			g_oTaskRunner;
@@ -25,8 +21,6 @@ extern TaskRunnerPtr 			g_oTaskRunner;
 //////////////////////////////////////////////////////////
 // Global Function Definitions
 //////////////////////////////////////////////////////////
-
-extern JNIEnv* GetJNIEnv( );
 
 #define LOGV(...) __android_log_print(ANDROID_LOG_VERBOSE, "libnav", __VA_ARGS__)
 #define LOGD(...) __android_log_print(ANDROID_LOG_DEBUG  , "libnav", __VA_ARGS__)

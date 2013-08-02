@@ -2,7 +2,6 @@ package com.sample.threading.activities;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -21,14 +20,10 @@ public class MasterActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		init();
-
 		setContentView(R.layout.master);
 		
 		start = (Button) findViewById(R.id.startThread);
 
-		results = (EditText) findViewById(R.id.results);
-		
 		start.setOnClickListener( new View.OnClickListener() {
 			public void onClick(View v) {
 				startThread();
@@ -61,18 +56,6 @@ public class MasterActivity extends Activity {
 		}
 
 	}
-
-	public native void init();
 	
 	public native void startThread();
-	
-	synchronized public void logMessage(final String strMessage) {
-		new Handler(getMainLooper()).post(new Runnable() {
-	        @Override
-	        public void run() {
-	    		results.append(strMessage);
-	        }
-		});
-		
-	}
 }
